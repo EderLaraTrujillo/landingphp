@@ -4,7 +4,7 @@
 	include 'menu.inc';
 ?>
 
-<form class="form-signin" method="post">
+<form class="form-signin" method="post" id="formlogin">
   <div class="text-center mb-4">
     <img class="mb-4" src="assets/media/img/people.jpg" alt="" width="120" height="120">
     <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
@@ -25,7 +25,7 @@
       <input type="checkbox" value="remember-me"> Remember me
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <button class="btn btn-lg btn-primary btn-block" type="button" onclick="login()">Sign in</button>
   <p class="mt-2 text-center">¿No estás Resgistrado? <a href="registro.php" class="btn btn-success">Registrarse</a></p>
   <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
 </form>
