@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="repositorio Data Dictionary." />
+    <title>Repositorio Data Dictionary</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <!-- Iconos de google material: -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>My Landing Page</title>
+  </head>
+  <body>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="display-4">Base de Datos: <em>repositorio</em><br> Data Dictionary</h2>
+                <p class="lead">Base de datos para control de documentos de proyectos de software. 
+                    Utilizada para los proyectos de PHP y PYTHON DJANGO en el programa de ADSI SENA CTMA.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="col-md-12 text-primary">Indice Alfabético de Tablas</h3>
+                <ol class="row">
+                    <div class="col-sm-6">
+                        <li><a class="btn bnt-primary" href='#CategProye'>CategProye</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#DatosUser'>DatosUser</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#DetaProyecto'>DetaProyecto</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#DetaRoles'>DetaRoles</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#Documentos'>Documentos</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#Habilidades'>Habilidades</a></li>
+                    </div>
+                    <div class="col-sm-6">
+                        <li><a class="btn bnt-primary" role="button" href='#Proyectos'>Proyectos</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#Rates'>Rates</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#RedeS'>RedeS</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#Roles'>Roles</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#TipoDocu'>TipoDocu</a></li>
+                        <li><a class="btn bnt-primary" role="button" href='#Usuarios'>Usuarios</a></li>
+                    </div>
+                </ol>    
+            </div>
+
+            <!-- Tabla: -->
+            <div class="table-responsive" id='CategProye'>
+                <p class="lead text-center bg-dark text-light">CategProye</p>
+                <tr><th colspan='11'>Tabla para las categorias de los proyectos, Ejemplos:
+                    Aplicación Móvil,
+                    Desarrollo WEB
+                    Desarrollo de Escritorio</th></tr>
+                 <table class="table table-sm" class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>                   
+                        <tr>
+                            <td>idCategProye</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria de la tabla categoria de proyectos</td>
+                        </tr>
+                        <tr>
+                            <td>NameCateProy</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre de categoria de proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>Arquitectura</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Arquitecturas implemetada:
+                                MVC
+                                CS
+                                MVE
+                                MicroServicios</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='DatosUser'>
+                <p class="lead text-center bg-dark text-light">DatosUser</p>
+                    <tr><th colspan='11'>Tabla de datos de usuario para los datos del usuario de la landing page</th></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idDetalle</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria para los datos de usuario</td>
+                        </tr>
+                        <tr>
+                            <td>idUsuarios</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de Usuario pk</td>
+                        </tr>
+                        <tr>
+                            <td>usuarioId</td>
+                            <td>VARCHAR(35)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Número de identicación del Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>NombUser</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombres del usuario</td>
+                        </tr>
+                        <tr>
+                            <td>ApelUser</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Apellidos del Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>EmailUser</td>
+                            <td>VARCHAR(155)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Correo Electrónico del Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>FotoUser</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Foto del usuario, solo la ruta, en este caso no se cargarán imagenes.</td>
+                        </tr>
+                        <tr>
+                            <td>TeleUser</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Telefono de Contacto del Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>EstaUser</td>
+                            <td>VARCHAR(50)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Estado del Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>Creado</td>
+                            <td>DATE</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Fecha de creación del Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>Modificado</td>
+                            <td>DATE</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Última fecha de modificación de datos del Usuario</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='DetaProyecto'>
+                <p class="lead text-center bg-dark text-light">DetaProyecto</p>
+                <tr><th colspan='11'>Tabla para agregar otros detalles del proyecto</th></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idDetaProyecto</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Iterador de pk de detalle proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>idCategProye</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Id de categoría de proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>idProyectos</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Id de proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>Lenguaje</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Lenguaje en el que se realiza el proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>MotorDB</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Motor de base de datos impemetada en el proyecto
+                                MySQL
+                                SQL Server
+                                PostgrSQL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='DetaRoles'>
+                <p class="lead text-center bg-dark text-light">DetaRoles</p>
+                <tr><th colspan='11'>Tabla con el contenedor de los diferentes roles del usuario</th></tr>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idDetaRoles</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Identificador del detalle</td>
+                        </tr>
+                        <tr>
+                            <td>idRoles</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador del Rol</td>
+                        </tr>
+                        <tr>
+                            <td>idUsuarios</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de usuario pk</td>
+                        </tr>
+                        <tr>
+                            <td>Agregado</td>
+                            <td>DATE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Fecha en la que se le agregó el rol al usuario</td>
+                        </tr>
+                        <tr>
+                            <td>EstaRol</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Estado del rol del usuario</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='Documentos'>
+                <p class="lead text-center bg-dark text-light">Documentos</p>
+                <tr><th colspan='11'>Tabla Documentos del proyecto por usuario</th></tr>
+                <table class="table table-sm" id='Documentos'>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idDocumentos</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria de la tabla documentos</td>
+                        </tr>
+                        <tr>
+                            <td>idUsuarios</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de usuarios pk</td>
+                        </tr>
+                        <tr>
+                            <td>idTipoDocu</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de tipo de proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>idProyectos</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador del proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>NombDocu</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre del documento</td>
+                        </tr>
+                        <tr>
+                            <td>PathDocu</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Ruta en la que se almacena el documento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='Habilidades'>
+                <p class="lead text-center bg-dark text-light">Habilidades</p>
+                <tr><th colspan='11'>Tabla de habilidades</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idHabilidades</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Iterador de tabla habilidades</td>
+                        </tr>
+                        <tr>
+                            <td>NombHabil</td>
+                            <td>VARCHAR(155)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre de la Habilidad</td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
+
+            <div class="table-responsive" id='Proyectos'>
+                <p class="lead text-center bg-dark text-light">Proyectos</p>
+                <tr><th colspan='11'>Tabla para guardar los proyectos</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idProyectos</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria de la tabla proyectos</td>
+                        </tr>
+                        <tr>
+                            <td>idCategProye</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de la categoria de proyectos</td>
+                        </tr>
+                        <tr>
+                            <td>NombProy</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre de Proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>DescProy</td>
+                            <td>LONGTEXT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Descripción del proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>ImgProye</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Imagen previa del proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>FechaIni</td>
+                            <td>DATE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Fecha de inicio del proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>FechaFin</td>
+                            <td>DATE</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Fecha de entrega de proyecto</td>
+                        </tr>
+                        <tr>
+                            <td>UrlRepo</td>
+                            <td>MEDIUMTEXT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Url del repositorio</td>
+                        </tr>
+                        <tr>
+                            <td>EstaProy</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Estado del proyecto: Activo / Inactivo</td>
+                        </tr>
+                    </tbody>        
+                </table>
+            </div>
+
+            <div class="table-responsive" id='Rates'>
+                <p class="lead text-center bg-dark text-light">Rates</p>
+                <tr><th colspan='11'>Tabla de calificacion de habilidades</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idRates</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Iterador de calificación</td>
+                        </tr>
+                        <tr>
+                            <td>idHabilidades</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de Habilidad</td>
+                        </tr>
+                        <tr>
+                            <td>idUsuarios</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de usuario</td>
+                        </tr>
+                        <tr>
+                            <td>Porcentaje</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Porcentaje de habilidad del usuario</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='RedeS'>
+                <p class="lead text-center bg-dark text-light">RedeS</p>
+                <tr><th colspan='11'>Tabla para las redes sociales del usuario</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idRedeS</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Iterador de redes Sociales</td>
+                        </tr>
+                        <tr>
+                            <td>idUsuarios</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Identificador de Usuario</td>
+                        </tr>
+                        <tr>
+                            <td>NombRed</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre de Red Social</td>
+                        </tr>
+                        <tr>
+                            <td>EstaRed</td>
+                            <td>TINYINT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>1</td>
+                            <td>Estado de red social</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='Roles'>
+                <p class="lead text-center bg-dark text-light">Roles</p>
+                <tr><th colspan='11'>Tabla para la parametrización de los roles de usuario</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idRoles</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria del rol del usuario, identificador de rol</td>
+                        </tr>
+                        <tr>
+                            <td>RoleName</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre del Rol de Usuario</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id='TipoDocu'>
+                <p class="lead text-center bg-dark text-light">TipoDocu</p>
+                <tr><th colspan='11'>Tabla que describe los tipos de documentos</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idTipoDocu</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>LLave primaria tipo de documentos</td>
+                        </tr>
+                        <tr>
+                            <td>NombTiDoc</td>
+                            <td>VARCHAR(45)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nombre de tipo de documentos</td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
+
+            <div class="table-responsive" id='Usuarios'>
+                <p class="lead text-center bg-dark text-light">Usuarios</p>
+                <tr><th colspan='11'>Tabla para el registro básico del usuario (usada para login y registro)</td></tr>
+                <table class="table table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th><abbr title="Valor por defecto">Default</abbr></th>
+                            <th><abbr title="Comentario">Comment</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idUsuarios</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria de usuarios</td>
+                        </tr>
+                        <tr>
+                            <td>NickName</td>
+                            <td>VARCHAR(15)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Nickname, correo electrónico con el que iniciará sesión el usuario</td>
+                        </tr>
+                        <tr>
+                            <td>PassUser</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Password del usuario</td>
+                        </tr>
+                        <tr>
+                            <td>EstaUser</td>
+                            <td>TINYINT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td>1</td>
+                            <td>Estado del usuario, por defecto es 1 o activo.</td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
