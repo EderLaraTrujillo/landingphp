@@ -4,7 +4,7 @@
 	include 'menu.inc';
 ?>
 
-<form class="form-signin">
+<form class="form-signin" method="post">
   <div class="text-center mb-4">
     <img class="mb-4" src="assets/media/img/people.jpg" alt="" width="120" height="120">
     <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>

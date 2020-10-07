@@ -6,7 +6,7 @@ include 'menu.inc';
 
 <section class="container mt-3">
 	<div class="row">
-		<form class="col-md-8 mt-4">
+		<form class="col-md-8 mt-4" method="post">
 			<h2 class="display-4 ">Registro de Usuario</h2>
 			<div class="form-row">
 				<div class="form-group col-md-3">
