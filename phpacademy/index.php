@@ -8,8 +8,11 @@
 	# Concatenación de variables:
 	$variable." ".$numero;
 
+	# Variable booleana:
+	$boolean = true;
+
 	# Impresión de variables:
-	echo $variable." ".$numero."<br>";
+	echo $variable." ".$numero."<br>".$boolean."<br>";
 
 	# Las variables en php son debilmente tipadas, sin embargo se distingue que los números o valores numéricos no van en "comillas", mientras que los de texto "si!!";
 	
