@@ -7,18 +7,25 @@ console.log('Archivo funciones en funcionamiento y cargado desde la raiz');
 //  Función para el login:
 function login(){
 	console.log('Intentamos iniciar sesión desde el boton');
-	// Variables en javascript:
-	const correo = document.getElementById('inputEmail').value;
-	const clave = document.getElementById('inputPassword').value;
+
+	// Forma rápida de capturar datos de formulario:
+	let datosingreso = $('#formlogin').serialize();
+	// retorna :inputEmail=ederlara%40misena.edu.co&inputPassword=senarules
+	
+	const ingreso = true;
+	// Variable para concatenar todas las variables:
+	let datos = datosingreso+'&ingreso='+ingreso;
 
 	// Mostramos los datos del formulario:
-	console.log(correo, clave);
+	console.log(datosingreso,datos);
+
+
 
 	// Con ajax le pasamos estos datos al controlador logincontrol.php:
 	$.ajax({
 		url:'../controlador/logincontrol.php',
 		type: 'POST',
-		data: correo+ '&'+clave
+		data: datos
 	})
 	.done(function(respuesta){
 		console.log(respuesta);

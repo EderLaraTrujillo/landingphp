@@ -8,8 +8,9 @@
 
 # Tarea 2:
 	# Consultar funciones de validación en php: 
-	# isset(), session(),
+	# isset(), session(), error_reporting();
 	# Consultar variables del sistema:
 	# $_POST[], $_GET[], $_SESSION[]
+	# qué es json
 
 ?>
