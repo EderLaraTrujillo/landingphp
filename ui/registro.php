@@ -1,34 +1,55 @@
 <title>Registro en my Landing Page</title>
-<?php  
+<?php
+require '../controlador/conex.php';  
 include 'base.inc';
 include 'menu.inc';
 ?>
 
 <section class="container mt-3">
 	<div class="row">
-		<form class="col-md-8 mt-4" method="post">
+		<form class="col-md-8 mt-4" method="post" id="formregistro">
 			<h2 class="display-4 ">Registro de Usuario</h2>
 			<div class="form-row">
 				<div class="form-group col-md-3">
 					<label for="inputState">Tipo de Usuario</label>
-					<select id="inputState" class="form-control">
+					<!-- Cambiamos los datos de option por datos de la base de datos: -->
+					<select name="tipouser" class="form-control">
 						<option selected disabled>Seleccione una Opción</option>
-						<option>Traer desde la base de datos...</option>
+						<?php
+							# REALIZAR UNA CONSULTA A LA BASE DE DATOS:  
+							# 1. Defino la consulta SQL:
+							$query = "select * from roles";
+							# 2. Valido con las funciones prepare, que la consulta se pueda ejecutar:
+							if ($stmt = $con->prepare($query)) {
+								# 3. Ejecuto la consulta sql en el servidor:
+							    $stmt->execute();
+							    # 4. Almacena el resultado en campos $field1 y $field2
+							    $stmt->bind_result($field1, $field2);
+							    # 5. Los recorre en un ciclo para poder mostrar linea a linea:
+							    while ($stmt->fetch()) {
+							    	# 6. Imprime la etiqueta option con los datos que se requieren de la base de datos:
+							        printf('<option value="'.$field1.'">'.$field2.'</option>');
+							    }
+							    # 7. Cerramos la conexión con la base de datos:
+							    $stmt->close();
+							}
+						?>
+						
 					</select>
 				</div>
 				<div class="form-group col-md-5">
 					<label for="inputEmail4">Email</label>
-					<input type="email" class="form-control" id="inputEmail4">
+					<input type="email" class="form-control" name="correo">
 				</div>
 				<div class="form-group col-md-4">
 					<label for="inputPassword4">Password</label>
-					<input type="password" class="form-control" id="inputPassword4">
+					<input type="password" class="form-control" name="clave">
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-4">
 					<label for="inputAddress">Identificación</label>
-					<input type="text" class="form-control" id="inputAddress" placeholder="1234">
+					<input type="text" class="form-control" name="direccion" placeholder="1234">
 				</div>
 				<div class="form-group col-md-4">
 					<label for="inputAddress2">Nombres</label>

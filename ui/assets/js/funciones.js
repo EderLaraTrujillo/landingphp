@@ -32,3 +32,23 @@ function login(){
 		$('#mensaje').html(respuesta);
 	})
 }
+
+
+function registro(){
+	// Capturamos los datos del formulario:
+	let datosregistro = $('#formregistro').serialize();
+
+	// Variable que simula el boton:
+	let registro = true;
+
+	let datos = datosregistro+'&registro='+registro;
+
+	$.ajax({
+		url: '../controlador/registrocontrol.php',
+		type: 'POST',
+		data:  datos
+	})
+	.done((res)=>{
+		$('#resultado').html(res);
+	})
+}
