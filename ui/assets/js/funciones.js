@@ -29,5 +29,6 @@ function login(){
 	})
 	.done(function(respuesta){
 		console.log(respuesta);
+		$('#mensaje').html(respuesta);
 	})
 }

@@ -9,7 +9,9 @@
 		# Variables con los datos desde javascript:
 		$correo = $_POST['correo'];
 		$passwd = $_POST['clave'];
-		printf('Hemos recibido '.$correo.' '.$passwd.' Desde el formulario de html pasando por jquery');
+		echo '<div class="alert alert-success" role="alert">
+  				Bienvenido '.$correo.'!!!
+			  </div>';
 	} else {
 		# Si el boton no se oprime, no hace nada, podemos mostrar un mensaje:
 		printf('Esperamos datos del formulario');

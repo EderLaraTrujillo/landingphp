@@ -19,7 +19,9 @@
     <input type="password" name="clave" class="form-control" placeholder="Password" required>
     <label for="clave">Password</label>
   </div>
-
+  <div class="form-group" id="mensaje">
+    <!-- Mensaje de bienvenida -->
+  </div>
   <div class="checkbox mb-3">
     <label>
       <input type="checkbox" value="remember-me"> Remember me
