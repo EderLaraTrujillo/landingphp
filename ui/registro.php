@@ -18,7 +18,7 @@ include 'menu.inc';
 						<?php
 							# REALIZAR UNA CONSULTA A LA BASE DE DATOS:  
 							# 1. Defino la consulta SQL:
-							$query = "select * from roles";
+							$query = "SELECT * from roles";
 							# 2. Valido con las funciones prepare, que la consulta se pueda ejecutar:
 							if ($stmt = $con->prepare($query)) {
 								# 3. Ejecuto la consulta sql en el servidor:
