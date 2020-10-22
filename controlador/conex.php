@@ -17,7 +17,7 @@
 	$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 		or die ('No se puede conectar a la base de datos error#:' . mysqli_connect_error());
 
-	# Consulta para afinar los caracteres especiales del español latino como la ñ y las tíldes:
+	# Consulta para afinar los caracteres especiales del español latino como la ñ y las tíldes, esto es conocido como COTEJAMIENTO:::
 	$acentos = $con->query('SET NAMES UTF8');
 
 ?>
