@@ -7,6 +7,8 @@
 'use strict';
 console.log('Archivo funciones cargado desde la raiz');
 
+// ----------------------------------------------------------------- //
+
 /* Función para el login, capturamos los datos del formulario de login y lo pasamos al controlador: */
 function login(){
 	console.log('Intentamos iniciar sesión desde el boton');
@@ -48,6 +50,7 @@ function registro(){
 	let registro = true;
 	// Concateno todos los datos con la variable registro:
 	let datos = datosregistro+'&registro='+registro;
+	console.log(datos);
 	// Pasamos al archivo del control para la ejecución:
 	$.ajax({
 		url: '../controlador/registrocontrol.php',
