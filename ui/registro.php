@@ -73,7 +73,9 @@ include 'menu.inc';
 				</div>
 			</div>
 			<button type="button" onclick="registro()" class="btn btn-success col align-self-end mr-5">Registrar</button>
-			
+			<div id="res" class="mt-2 col text-center">
+				<!-- Mensaje de Registro -->
+			</div>
 		</form>
 		<!-- Imagen de perfil: -->
 		<div class="col-md-4 mt-4">
